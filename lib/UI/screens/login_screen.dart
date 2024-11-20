@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:noviindus_interview/UI/widgets/custom_bottom_button.dart';
+import 'package:noviindus_interview/UI/widgets/custom_textformfeild.dart';
 import 'package:noviindus_interview/core/constant/style/text_style.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -57,25 +58,17 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 12),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: 'Enter your email',
-                    filled: true,
-                    fillColor: Colors.white10,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(
-                        color: Colors.grey.shade700,
-                      ),
-                    ),
-                  ),
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: CustomTextFormField(
+                  hinttext: 'Enter your email',
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Email is required';
+                      return 'Email is required'; 
                     }
                     return null;
                   },
+                  keyboardType: TextInputType
+                      .emailAddress,
                 ),
               ),
               const SizedBox(height: 15),
@@ -89,27 +82,18 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 12),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: 'Enter your password',
-                    filled: true,
-                    fillColor: Colors.white10,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(
-                        color: Colors.grey.shade700,
-                      ),
-                    ),
-                  ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Password is required';
-                    }
-                    return null;
-                  },
-                ),
-              ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextFormField(
+                    hinttext: 'Enter your password',
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'password is required';
+                      }
+                      return null;
+                    },
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                  )),
               const SizedBox(height: 80),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
