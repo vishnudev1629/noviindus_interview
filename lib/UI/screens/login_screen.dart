@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: 'Login',
                   onPressed: () {
                     if (formKey.currentState?.validate() ?? false) {
-                      // Example: Navigator.pushReplacementNamed(context, '/home');
+                      //  Navigator.pushReplacementNamed(context, '/home');
                     }
                   },
                 ),
