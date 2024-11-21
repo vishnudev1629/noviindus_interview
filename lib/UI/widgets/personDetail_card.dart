@@ -19,6 +19,7 @@ class PersonDetailBookingCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 20,left: 20,top: 10,bottom: 10.0),
       child: Card(
+        color: Colors.grey.shade200,
         elevation: 2, 
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),

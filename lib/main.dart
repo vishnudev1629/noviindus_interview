@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:noviindus_interview/UI/screens/home_screen.dart';
 import 'package:noviindus_interview/UI/screens/login_screen.dart';
 import 'package:noviindus_interview/UI/screens/register_screen.dart';
-import 'package:noviindus_interview/UI/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,8 +21,9 @@ class MyApp extends StatelessWidget {
       ),
        initialRoute: '/',
         routes: {
-          '/': (context) =>  const RegisterScreen(),
+          '/': (context) =>  const HomeScreen(),
           '/login': (context) => const RegisterScreen(),
+          '/register': (context) => const RegisterScreen(),
         }
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noviindus_interview/core/constant/style/text_style.dart';
+import 'package:noviindus_interview/core/constants/style/text_style.dart';
 
 // ignore: must_be_immutable
 class CustomBottomButton extends StatelessWidget {

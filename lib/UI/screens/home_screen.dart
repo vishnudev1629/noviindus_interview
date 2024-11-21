@@ -180,7 +180,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundcolor: const Color(0xff006837),
                   foregroundColor: const Color(0xffFFFFFF),
                   text: 'Register Now',
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/register');
+                  }),
             )
           ],
         ),
