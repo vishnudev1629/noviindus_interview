@@ -14,6 +14,9 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: CustomTextFormField(
+                  controller:_emailController,
                   hinttext: 'Enter your email',
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -84,6 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: CustomTextFormField(
+                    controller: _passwordController,
                     hinttext: 'Enter your password',
                     validator: (value) {
                       if (value == null || value.isEmpty) {
